@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/tokenmill-core",
+    "crates/tokenmill-cli",
+]
+resolver = "2"
