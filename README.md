@@ -38,7 +38,7 @@ cargo install --path crates/tokenmill-cli
 Or build from source:
 
 ```bash
-git clone https://github.com/you/tokenmill
+git clone https://github.com/fr3on/tokenmill
 cd tokenmill
 cargo build --release
 # binary at: target/release/tokenmill-cli
@@ -92,7 +92,7 @@ Example output:
   "mean_tokens": 482.7,
   "min_tokens": 12,
   "max_tokens": 4096
-}[gitkey](../df/gitkey)
+}
 ```
 
 ---
@@ -270,19 +270,3 @@ cargo test
 # Lint
 cargo clippy -- -D warnings
 ```
-
----
-
-## Project structure
-
-```
-tokenmill/
-├── crates/
-│   ├── tokenmill-core/    # pure library — validate, stats, filter, convert,
-│   │                      # dedup, sample, parquet, inference
-│   └── tokenmill-cli/     # thin CLI — main.rs, tui.rs, hf.rs
-└── tests/fixtures/        # small JSONL files for integration tests
-```
-
-See [`REFACTOR.md`](REFACTOR.md) for architecture details and open work.
-
